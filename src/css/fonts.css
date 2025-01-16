@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Lemon Milk Bold";
+    src: url('../fonts/LEMONMILK-Bold.otf');
+}
+
+@font-face {
+    font-family: "Lemon Milk Medium";
+    src: url('../fonts/LEMONMILK-Medium.otf');
+}
+
+@font-face {
+    font-family: "Nexa";
+    src: url('../fonts/Nexa-Heavy.ttf');
+}
+
+@font-face {
+    font-family: "Ms Madi";
+    src: url('../fonts/MsMadi-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Ltinternet";
+    src: url('../fonts/LTInternet-Regular.ttf');
+}

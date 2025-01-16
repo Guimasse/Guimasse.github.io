@@ -1,0 +1,38 @@
+@import url('fonts.css');
+@import url('header-style.css');
+@import url('landing-page.css');
+
+
+    
+/********************** Resizing **********************/
+
+/* Media query pour écrans étroits */
+@media screen and (max-width: 750px) {
+
+    .landing-page {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        height: 100vh;
+    }
+    
+    .big-title {
+        font-size: clamp(3rem, 9vw, 70rem);
+        width: 60%;
+    }
+
+    .under-title {
+        font-size: clamp(0.4rem, 4vw, 10rem);
+    }
+
+    .button a {
+        width: 20vw;
+        font-size: clamp(0.4rem, 2vw, 2rem);
+    }
+
+    .right {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}

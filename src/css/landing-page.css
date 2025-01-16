@@ -1,0 +1,346 @@
+/**************************************** landing-page ****************************************/
+
+.landing-page {
+    display: flex;
+    flex-direction: row;
+    width: 350vw;
+    height: 95vh;
+    flex-grow: 1;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    transition: transform 1.5s ease-in-out;
+}
+
+/* scroll bar
+.landing-page::-webkit-scrollbar {
+    width: 0.5vw;
+    height: 0.5vw;
+}
+
+.landing-page::-webkit-scrollbar-track {
+    background-color: #3a3a3a;
+}
+
+.landing-page::-webkit-scrollbar-thumb {
+    background-color: #494949;
+    border-radius: 10px;
+} */
+
+.scroll {
+    position: absolute;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100%;
+}
+
+/* scroll bar */
+.scroll::-webkit-scrollbar {
+    width: 0.5vw;
+    height: 0.5vw;
+    /* width: 0px;
+    background: transparent; */
+}
+
+.scroll::-webkit-scrollbar-track {
+    background-color: #3a3a3a;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background-color: #494949;
+    border-radius: 10px;
+}
+
+/**************************************** home-left ****************************************/
+
+.home-left {
+    width: 50vw;
+    height: 100%;
+    flex-direction: column;
+    user-select: none;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.big-title {
+    margin-left: 5.5vw;
+    margin-bottom: 0vh;
+    font-family: "Lemon Milk Bold";
+    font-size: clamp(1rem, 5vw, 70rem);
+}
+
+.home-left .under-line {
+    content: "";
+    background-color: #ccffff;
+    margin-left: 5.5vw;
+    margin-top: 1vh;
+    /* under-line size */
+    width: 60%;
+    height: 10px;
+}
+
+.under-title {
+    margin-top: 1vh;
+    margin-left: 5.5vw;
+    font-family: "Nexa";
+    font-size: clamp(0.4rem, 2vw, 10rem);
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    margin: 10vh 20%;
+    list-style: none;
+    font-family: "Nexa";
+}
+
+.button a {
+    display: flex;
+    transition: scale 0.5s;
+    border-color: black;
+    border: solid;
+    text-decoration: none;
+    border-radius: 10px / 10px;
+    padding: 5% 2%;
+    width: 10vw;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(0.4rem, 1vw, 2rem);
+    cursor: pointer;
+}
+
+.button a:visited {
+    color: black;
+}
+
+.button a:hover {
+    scale: 1.1
+}
+
+.linkedin-container {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    height: 8vh;
+}
+
+.logo-container {
+    position: absolute;
+    width: 6vh;
+    height: 5vh;
+    /* margin-left: 1vh; */
+    background-color: white;
+    border-radius: 0 2.5vh 2.5vh 0;
+}
+
+.logo-container .logo {
+    display: block;
+    height: 5vh;
+    margin-left: 1vh;
+    background-image: url(../img/logo_linkedin.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-radius: 2.5vh;
+}
+
+.link-linkedin {
+    position: relative;
+    display: flex;
+    align-items: center;
+    content: "www.linkedin.com/in/guillaume-mass%C3%A9-721813209/";
+    color: black;
+    /* width: 5vh; */
+    height: 5vh;
+    margin-left: 1vh;
+    padding-left: 6vh;
+    padding-right: 2vh;
+    background-color: #3a3a3a;
+    overflow: hidden;
+    white-space: nowrap;
+    color: rgb(217, 217, 217);
+    font-family: "Ltinternet";
+    border-radius: 2.5vh;
+    left: -100%;
+    transition: translate 1s;
+}
+
+.linkedin_animate {
+    translate: 102%;
+}
+
+/**************************************** home-about ****************************************/
+
+.home-about {
+    background-color: black;
+    min-height: 100%;
+    width: 50vw;
+    box-sizing: border-box;
+}
+
+.photo_of_me {
+    background-image: url(../img/photo-home-page.jpg);
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/**************************************** home-right ****************************************/
+
+.about-right {
+    width: 50vw;
+    height: 95vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.content h1 {
+    display: flex;
+    /* background-color: rgb(38, 38, 38); */
+    background-image: url(../img/desktop-flou.jpg);
+    background-size: cover;
+    color: #ccffff;
+    margin: 0px;
+    padding: 4vh 0vw;
+    font-family: "Lemon Milk Bold";
+    font-size: clamp(1rem, 5vw, 70rem);
+    text-align: center;
+}
+
+.under-line-about {
+    display: flex;
+    content: "";
+    background-color: #ccffff;
+    /* under-line size */
+    width: 100%;
+    height: 10px;
+}
+
+.content p {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: "Ltinternet";
+    margin-top: 5vh;
+    padding: 0vh 10%;
+    font-size: clamp(0.5rem, 1.5vw, 2rem);
+}
+
+/**************************************** resume-content ****************************************/
+
+.resume-content {
+    /* display: flex; */
+    background-color: #ffffff;
+    width: 100vw;
+    height: 100%;
+}
+
+.resume-content .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+.resume-content .header h1 {
+    font-family: "Lemon Milk Bold";
+    text-align: center;
+    font-size: 3rem;
+    background-color: #242424;
+    color: #ffffff;
+    margin: 0;
+    width: 100vw;
+}
+
+.resume-content .under-line {
+    content: "";
+    background-color: #ccffff;
+    /* under-line size */
+    width: 100%;
+    height: 10px;
+    margin: 0;
+}
+
+.resume-body {
+    margin: 0;
+    width: 100vw;
+    height: auto;
+    background-color: black;
+}
+
+.resume-body .details {
+    /* position: absolute; */
+    position: fixed;
+    display: flex;
+    margin-top: 2vh;
+    width: 25vw;
+    height: 30vh;
+    z-index: 10;
+}
+
+.details .content {
+    max-width: 0%;
+    height: 100%;
+    /* background-color: #494949; */
+    background-color: white;
+    border-radius: 0 5vh 5vh 0;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+.details .content_sep {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Nexa";
+    font-size: 30px;
+    color: white;
+    margin-top: 5vh;
+    width: 100%;
+    height: 5vh;
+    background-color: #55C1FA;
+}
+
+.details .icon {
+    margin-top: 5vh;
+    width: 5vh;
+    height: 5vh;
+    justify-content: end;
+    background-image: url(../img/details-icon.png);
+    background-size: 5vh;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.resume-body p{
+    margin: 0;
+    font-family: "Ltinternet";
+    font-size: 5rem;
+    color: white;
+}
+
+/**************************************** portfolio-content ****************************************/
+
+.portfolio-content {
+    background-color: #252525;
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+}
+
+.portfolio-content p {
+    font-family: "Ltinternet";
+    font-size: 5rem;
+    text-align: center;
+    margin: 3vh 1vw;
+}
