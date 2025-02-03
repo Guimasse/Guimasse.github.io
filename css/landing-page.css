@@ -196,13 +196,13 @@
     height: 95vh;
 }
 
-.content {
+.about-right .content {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.content h1 {
+.about-right .content h1 {
     display: flex;
     /* background-color: rgb(38, 38, 38); */
     background-image: url(../img/desktop-flou.jpg);
@@ -211,8 +211,10 @@
     margin: 0px;
     padding: 4vh 0vw;
     font-family: "Lemon Milk Bold";
-    font-size: clamp(1rem, 5vw, 70rem);
+    font-size: clamp(1rem, 3vw, 70rem);
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .under-line-about {
@@ -279,29 +281,32 @@
 }
 
 .resume-body .details {
-    /* position: absolute; */
     position: fixed;
     display: flex;
+    /* flex-grow: 1; */
     margin-top: 2vh;
-    width: 25vw;
+    width: 27vw;
     height: 30vh;
     z-index: 10;
+    /* background-color: red; */
 }
 
 .details .content {
+    flex-grow: 1;
     max-width: 0%;
+    /* max-width: 100%; */
     height: 100%;
-    /* background-color: #494949; */
     background-color: white;
     border-radius: 0 5vh 5vh 0;
     overflow-x: hidden;
     white-space: nowrap;
+    /* background-color: green; */
 }
 
 .details .content_sep {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     font-family: "Nexa";
     font-size: 30px;
     color: white;
@@ -321,6 +326,82 @@
     background-repeat: no-repeat;
     cursor: pointer;
 }
+
+.details .content .content-information {
+    height : 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.details .content .content-information .begin {
+    font-family: "Ltinternet";
+    padding-left: 1vw;
+    display: flex;
+    justify-content: left;
+    color: black;
+    overflow-x: hidden;
+    font-size: clamp(0.5rem, 1.5vw, 2rem);
+}
+
+.details .content .content-information p {
+    font-family: "Ltinternet";
+    margin-left: 2%;
+    padding-left: 0px;
+    display: flex;
+    justify-content: left;
+    color: black;
+    overflow-x: hidden;
+    font-size: clamp(0.5rem, 1.5vw, 2rem);
+    flex-shrink: 1;
+}
+
+.details .content .list {
+    display: flex;
+    flex-direction: row;
+    padding-left: 1vw;
+    align-items: center;
+}
+
+.details .list .email-icon {
+    width: 2vw;
+    height: 2vw;
+    background-image: url(../img/email-icon.png);
+    background-size: 2vw;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    flex-shrink: 1;
+}
+
+.details .list .telephone-icon {
+    /* margin-top: 0.7vh; */
+    width: 2vw;
+    height: 2vw;
+    background-image: url(../img/telephone-icon.png);
+    background-size: 2vw;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    flex-shrink: 1;
+}
+
+.details .list .linkedin-icon {
+    /* margin-top: 0.7vh; */
+    width: 2vw;
+    height: 2vw;
+    background-image: url(../img/logo_linkedin.png);
+    background-size: 2vw;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    flex-shrink: 1;
+}
+
+.details .list .end {
+    width: 2vw;
+    height: 2vw;
+    background-color: white;
+    flex-shrink: 0;
+}
+
 
 .resume-body p{
     margin: 0;

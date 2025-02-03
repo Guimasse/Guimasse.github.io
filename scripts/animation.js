@@ -189,9 +189,10 @@ window.addEventListener('load', function () {
 });
 
 setupHoverEffects()
-
 const resumeDetailIcon = document.getElementById('details-icon');
 const resumeDetailContent = document.getElementById('resume-details-content');
+// const resumeDetailcontentIcon = document.getElementById('content-detail-icon');
+const resumeDetailcontentTxt = document.getElementById('content-detail-txt');
 
 let active_details_content = false;
 
@@ -205,26 +206,42 @@ resumeDetailIcon.addEventListener('mouseover', function () {
         resumeDetailContent.style.transition = '1s';
         resumeDetailIcon.style.transition = '1s';
         resumeDetailContent.style.maxWidth = '100%';
+        // resumeDetailcontentIcon.style.transition = '4s';
+        // resumeDetailcontentIcon.style.width = '2vw';
+        // resumeDetailcontentTxt.style.transition = '4s';
+        // resumeDetailcontentTxt.style.width = 'auto';
 });
 
 resumeDetailContent.addEventListener('mouseover', function () {
         resumeDetailContent.style.transition = '1s';
         resumeDetailIcon.style.transition = '1s';
         resumeDetailContent.style.maxWidth = '100%';
+        // resumeDetailcontentIcon.style.transition = '4s';
+        // resumeDetailcontentIcon.style.width = '2vw';
+        // resumeDetailcontentTxt.style.transition = '4s';
+        // resumeDetailcontentTxt.style.width = 'auto';
 });
 
 resumeDetailContent.addEventListener('mouseout', function () {
-    console.log('mouseleave');
+    // console.log('mouseleave');
     resumeDetailContent.style.transition = '1s';
     resumeDetailIcon.style.transition = '1s';
     resumeDetailContent.style.maxWidth = '0%';
+    // resumeDetailcontentIcon.style.transition = '4s';
+    // resumeDetailcontentIcon.style.width = '0vw';
+    // resumeDetailcontentTxt.style.transition = '4s';
+    // resumeDetailcontentTxt.style.width = '0vw';
 });
 
 resumeDetailIcon.addEventListener('mouseout', function () {
-    console.log('mouseleave');
+    // console.log('mouseleave');
     resumeDetailContent.style.transition = '1s';
     resumeDetailIcon.style.transition = '1s';
     resumeDetailContent.style.maxWidth = '0%';
+    // resumeDetailcontentIcon.style.transition = '4s';
+    // resumeDetailcontentIcon.style.width = '0vw';
+    // resumeDetailcontentTxt.style.transition = '4s';
+    // resumeDetailcontentTxt.style.width = '0vw';
 });
 
 // style.sheet.deleteRule(0);
