@@ -200,11 +200,11 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 95vh;
 }
 
-.about-right .content h1 {
+/* .about-right .content h1 {
     display: flex;
-    /* background-color: rgb(38, 38, 38); */
     background-image: url(../img/desktop-flou.jpg);
     background-size: cover;
     color: #ccffff;
@@ -221,20 +221,20 @@
     display: flex;
     content: "";
     background-color: #ccffff;
-    /* under-line size */
     width: 100%;
     height: 10px;
-}
+} */
 
-.content p {
+.about-right .content p {
     flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
     font-family: "Ltinternet";
     margin-top: 5vh;
     padding: 0vh 10%;
-    font-size: clamp(0.5rem, 1.5vw, 2rem);
+    font-size: clamp(0.5rem, 1.3vw, 2rem);
 }
 
 /**************************************** resume-content ****************************************/
@@ -266,10 +266,10 @@
 
 .resume-content .under-line {
     content: "";
-    background-color: #ccffff;
+    background-color: #c7c7c7;
     /* under-line size */
     width: 100%;
-    height: 10px;
+    height: 0.5vh;
     margin: 0;
 }
 
@@ -399,7 +399,8 @@
 
 .resume-content-body .left-resume {
     width: 30%;
-    background-color: #3786ff;
+    /* background-color: #3786ff; */
+    background-color: #393939;
 }
 
 .resume-content-body .right-resume {
@@ -429,25 +430,74 @@
     width: auto;
     font-family: "Lemon Milk Bold";
     font-size: 2.5rem;
-    color: #3786ff;
+    color: #5a9cff;
 }
 
 .resume-content-body .separation{
     width: 100%;
-    height: 1vh;
-    background-color: #3786ff;
+    height: 0.5vh;
+    margin-top: 1vh;
+    /* background-color: #3786ff; */
+    background-color: #5a9cff;
+}
+
+.resume-content-body .job-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+}
+
+.resume-content-body .period{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    border-radius: 5vw 5vw 5vw 5vw;
+    background-color: #5a9cff;
+    margin-right: 2vw;
+    font-weight: bold;
+}
+
+.resume-content-body .period p{
+    color: white;
+    text-align: center;
+    font-family: "Ltinternet";
+    font-size: 1.2rem;
+    margin: 0px;
+    padding: 0px;
 }
 
 .resume-content-body .job-title{
-    font-family: "Arial";
+    /* width: auto; */
+    font-family: "Ltinternet";
     font-size: 2rem;
     color: black;
+    font-weight: bold;
+}
+
+.resume-content-body .job-title .blue {
+    color: #5a9cff;
+}
+
+.resume-content-body .job-content {
+    margin-left: 10vw;
+    margin-top: 0;
 }
 
 .resume-content-body .description{
-    font-family: "Arial";
-    font-size: 1rem;
+    font-family: "Ltinternet";
+    font-size: 1.1rem;
     color: black;
+    list-style-type: none;
+    margin: 0;
+}
+
+.description li::before {
+    content: ">"; /* Ajoute une étoile comme puce */
+    margin-right: 0.5vw;
 }
 
 /**************************************** portfolio-content ****************************************/
