@@ -246,259 +246,305 @@
     height: 100%;
 }
 
-.resume-content .header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ffffff;
-    margin: 0;
-}
+    .resume-content .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffff;
+        margin: 0;
+    }
 
-.resume-content .header h1 {
-    font-family: "Lemon Milk Bold";
-    text-align: center;
-    font-size: 3rem;
-    background-color: #242424;
-    color: #ffffff;
-    margin: 0;
-    width: 100vw;
-}
+    .resume-content .header h1 {
+        font-family: "Lemon Milk Bold";
+        text-align: center;
+        font-size: 3rem;
+        background-color: #242424;
+        color: #ffffff;
+        /* color: #25232a; */
+        margin: 0;
+        width: 100vw;
+    }
 
-.resume-content .under-line {
-    content: "";
-    background-color: #c7c7c7;
-    /* under-line size */
-    width: 100%;
-    height: 0.5vh;
-    margin: 0;
-}
+    .resume-content .under-line {
+        content: "";
+        background-color: #c7c7c7;
+        /* under-line size */
+        width: 100%;
+        height: 0.5vh;
+        margin: 0;
+    }
 
-.resume-body {
-    margin: 0;
-    width: 100vw;
-    height: auto;
-    background-color: #eeeeee ;
-}
+    .resume-body {
+        margin: 0;
+        width: 100vw;
+        height: auto;
+        /* background-color: #eeeeee ; */
+    }
 
-.resume-body .details {
-    position: fixed;
-    display: flex;
-    /* flex-grow: 1; */
-    margin-top: 2vh;
-    width: 27vw;
-    height: 30vh;
-    z-index: 10;
-    /* background-color: red; */
-}
+        .resume-body .details {
+            position: fixed;
+            display: flex;
+            margin-top: 2vh;
+            width: 27vw;
+            height: 30vh;
+            z-index: 10;
+            /* background-color: red; */
+        }
 
-.details .content {
-    flex-grow: 1;
-    max-width: 0%;
-    /* max-width: 100%; */
-    height: 100%;
-    background-color: white;
-    border-radius: 0 5vh 5vh 0;
-    overflow-x: hidden;
-    white-space: nowrap;
-    /* background-color: green; */
-}
+        .details .content {
+            flex-grow: 1;
+            max-width: 0%;
+            /* max-width: 100%; */
+            height: 100%;
+            background-color: white;
+            border-radius: 0 5vh 5vh 0;
+            overflow-x: hidden;
+            white-space: nowrap;
+            /* background-color: green; */
+        }
 
-.details .content_sep {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Nexa";
-    font-size: 30px;
-    color: white;
-    margin-top: 5vh;
-    width: 100%;
-    height: 5vh;
-    background-color: #55C1FA;
-}
+        .details .content_sep {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Nexa";
+            font-size: 30px;
+            color: white;
+            margin-top: 5vh;
+            width: 100%;
+            height: 5vh;
+            background-color: #55C1FA;
+        }
 
-.details .icon {
-    margin-top: 5vh;
-    width: 5vh;
-    height: 5vh;
-    justify-content: end;
-    background-image: url(../img/details-icon.png);
-    background-size: 5vh;
-    background-repeat: no-repeat;
-    cursor: pointer;
-}
+        .details .icon {
+            margin-top: 5vh;
+            width: 5vh;
+            height: 5vh;
+            justify-content: end;
+            background-image: url(../img/details-icon.png);
+            background-size: 5vh;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
 
-.details .content .content-information {
-    height : 20vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+        .details .content .content-information {
+            height : 20vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-.details .content .content-information p {
-    font-family: "Ltinternet";
-    margin: 0;
-    padding-left: 0px;
-    display: flex;
-    justify-content: left;
-    color: black;
-    overflow-x: hidden;
-    font-size: clamp(0.5rem, 1.5vw, 2rem);
-    flex-shrink: 1;
-}
+            .details .content .content-information p {
+                font-family: "Ltinternet";
+                margin: 0;
+                padding-left: 0px;
+                display: flex;
+                justify-content: left;
+                color: black;
+                overflow-x: hidden;
+                font-size: clamp(0.5rem, 1.5vw, 2rem);
+                flex-shrink: 1;
+            }
 
-.details .content .list {
-    display: flex;
-    flex-direction: row;
-    padding-left: 1vw;
-    align-items: center;
-}
+            .details .content .list {
+                display: flex;
+                flex-direction: row;
+                padding-left: 1vw;
+                align-items: center;
+            }
 
-.details .list .email-icon {
-    width: 2.5vw;
-    height: 2.5vw;
-    background-image: url(../img/email-icon.png);
-    background-size: 2vw;
-    background-repeat: no-repeat;
-    overflow-x: hidden;
-    flex-shrink: 1;
-}
+            .details .list .email-icon {
+                width: 2.5vw;
+                height: 2.5vw;
+                background-image: url(../img/email-icon.png);
+                background-size: 2vw;
+                background-repeat: no-repeat;
+                overflow-x: hidden;
+                flex-shrink: 1;
+            }
 
-.details .list .telephone-icon {
-    /* margin-top: 0.7vh; */
-    width: 2.5vw;
-    height: 2.5vw;
-    background-image: url(../img/telephone-icon.png);
-    background-size: 2vw;
-    background-repeat: no-repeat;
-    overflow-x: hidden;
-    flex-shrink: 1;
-}
+            .details .list .telephone-icon {
+                /* margin-top: 0.7vh; */
+                width: 2.5vw;
+                height: 2.5vw;
+                background-image: url(../img/telephone-icon.png);
+                background-size: 2vw;
+                background-repeat: no-repeat;
+                overflow-x: hidden;
+                flex-shrink: 1;
+            }
 
-.details .list .linkedin-icon {
-    /* margin-top: 0.7vh; */
-    width: 2.5vw;
-    height: 2.5vw;
-    background-image: url(../img/logo_linkedin.png);
-    background-size: 2vw;
-    background-repeat: no-repeat;
-    overflow-x: hidden;
-    flex-shrink: 1;
-}
+            .details .list .linkedin-icon {
+                /* margin-top: 0.7vh; */
+                width: 2.5vw;
+                height: 2.5vw;
+                background-image: url(../img/logo_linkedin.png);
+                background-size: 2vw;
+                background-repeat: no-repeat;
+                overflow-x: hidden;
+                flex-shrink: 1;
+            }
 
-.details .list .end {
-    width: 2vw;
-    height: 2vw;
-    background-color: white;
-    flex-shrink: 0;
-}
+            .details .list .end {
+                width: 2vw;
+                height: 2vw;
+                background-color: white;
+                flex-shrink: 0;
+            }
 
-.resume-content-body {
-    display: flex;
-    flex-direction: row;
-}
+        .resume-content-body {
+            display: flex;
+            flex-direction: row;
+        }
 
-.resume-content-body .left-resume {
-    width: 30%;
-    /* background-color: #3786ff; */
-    background-color: #393939;
-}
+            .resume-content-body .left-resume {
+                width: 30%;
+                /* background-color: #3786ff; */
+                background-color: #1e1d21;
+            }
 
-.resume-content-body .right-resume {
-    width: 70%;
-    padding-top: 2vw;
-    padding-left: 4vw;
-    padding-right: 4vw;
-    padding-bottom: 4vw;
-}
+            .resume-content-body .right-resume {
+                width: 70%;
+                padding-top: 2vw;
+                padding-left: 4vw;
+                padding-right: 4vw;
+                padding-bottom: 4vw;
+                background-color: #25232a;
+            }
 
-.resume-content-body .title-section {
-    display: flex;
-    flex: row;
-    align-items: center;
-}
+                .resume-content-body .picture-header {
+                    width: 100%;
+                    height: 40vh;
+                    background-image: url(../img/header_cv_blur.jpg);
+                    background-size: 100%;
+                    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+                    margin-bottom: 3vh;
+                }
 
-.resume-content-body .title-section .work-experiences {
-    width: 4vw;
-    height: 4vw;
-    background-image: url(../img/work-icon.png);
-    background-size: 4vw;
-}
+                    .resume-content-body .picture-header .title{
+                        font-family: "Lemon Milk Bold";
+                        text-align: left;
+                        font-size: 3rem;
+                        color: #ffffff;
+                        margin: 0;
+                        padding-top: 10vh;
+                        padding-left: 2vw;
+                        width: 100%;
+                    }
 
-.resume-content-body .title-section h1{
-    margin: 0px;
-    margin-left: 2vw;
-    width: auto;
-    font-family: "Lemon Milk Bold";
-    font-size: 2.5rem;
-    color: #5a9cff;
-}
+                    .resume-content-body .picture-header .sub_title{
+                        font-family: "Courier New";
+                        text-align: left;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        color: #ffffff;
+                        margin: 0;
+                        padding-left: 2vw;
+                        width: 100%;
+                    }
 
-.resume-content-body .separation{
-    width: 100%;
-    height: 0.5vh;
-    margin-top: 1vh;
-    /* background-color: #3786ff; */
-    background-color: #5a9cff;
-}
+                    .resume-content-body .picture-header .blue {
+                        color: #84b5ff;
+                    }
 
-.resume-content-body .job-section{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 0;
-}
+                .resume-content-body .title-section {
+                    display: flex;
+                    flex: row;
+                    align-items: center;
+                }
 
-.resume-content-body .period{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width: 10vw;
-    aspect-ratio: 1 / 1;
-    position: relative;
-    border-radius: 5vw 5vw 5vw 5vw;
-    background-color: #5a9cff;
-    margin-right: 2vw;
-    font-weight: bold;
-}
+                    .resume-content-body .title-section .work-experiences {
+                        width: 4vw;
+                        height: 4vw;
+                        background-image: url(../img/work-icon.png);
+                        background-size: 4vw;
+                    }
 
-.resume-content-body .period p{
-    color: white;
-    text-align: center;
-    font-family: "Ltinternet";
-    font-size: 1.2rem;
-    margin: 0px;
-    padding: 0px;
-}
+                    .resume-content-body .title-section h1{
+                        margin: 0px;
+                        margin-left: 2vw;
+                        width: auto;
+                        font-family: "Lemon Milk Bold";
+                        font-size: 2.5rem;
+                        color: #e3eeff;
+                    }
 
-.resume-content-body .job-title{
-    /* width: auto; */
-    font-family: "Ltinternet";
-    font-size: 2rem;
-    color: black;
-    font-weight: bold;
-}
+                    .resume-content-body .separation{
+                        width: 100%;
+                        height: 0.5vh;
+                        margin-top: 1vh;
+                        /* background-color: #3786ff; */
+                        background-color: #e3eeff;
+                    }
 
-.resume-content-body .job-title .blue {
-    color: #5a9cff;
-}
+                .resume-content-body .job-section {
+                    background-color: #2d2b33;
+                    margin-top: 4vh;
+                    padding-left: 1.5vw;
+                    padding-right: 1vw;
+                    padding-bottom: 2vh;
+                    border-radius: 5vw 5vw 5vw 5vw;
+                }
 
-.resume-content-body .job-content {
-    margin-left: 10vw;
-    margin-top: 0;
-}
+                    .resume-content-body .job-header{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        margin: 0;
+                    }
 
-.resume-content-body .description{
-    font-family: "Ltinternet";
-    font-size: 1.1rem;
-    color: black;
-    list-style-type: none;
-    margin: 0;
-}
+                        .resume-content-body .period{
+                            display:flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 10vw;
+                            aspect-ratio: 1 / 1;
+                            position: relative;
+                            border-radius: 5vw 5vw 5vw 5vw;
+                            background-color: #5a9cff;
+                            margin: 0;
+                            margin-right: 2vw;
+                            font-weight: bold;
+                        }
 
-.description li::before {
-    content: ">"; /* Ajoute une étoile comme puce */
-    margin-right: 0.5vw;
-}
+                        .resume-content-body .period p{
+                            color: white;
+                            text-align: center;
+                            font-family: "Ltinternet";
+                            font-size: 1.2rem;
+                            margin: 0px;
+                            padding: 0px;
+                        }
+
+                        .resume-content-body .job-title{
+                            /* width: auto; */
+                            font-family: "Ltinternet";
+                            font-size: 2rem;
+                            color: #e3eeff;
+                            font-weight: bold;
+                        }
+
+                        .resume-content-body .job-title .blue {
+                            color: #5a9cff;
+                        }
+
+                    .resume-content-body .job-content {
+                        margin-left: 10vw;
+                        margin-top: 0;
+                    }
+
+                        .resume-content-body .description{
+                            font-family: "Ltinternet";
+                            font-size: 1.1rem;
+                            color: #e3eeff;
+                            list-style-type: none;
+                            margin: 0;
+                        }
+
+                        .description li::before {
+                            content: ">"; /* Ajoute une étoile comme puce */
+                            margin-right: 0.5vw;
+                        }
 
 /**************************************** portfolio-content ****************************************/
 
