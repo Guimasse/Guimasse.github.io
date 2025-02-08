@@ -189,18 +189,22 @@
 /* Colonne droite (expérience et autres sections) */
 .resume-content-body .right-resume {
     width: 70%;
-    padding: 2vw 4vw 4vw 4vw;
     background-color: #25232a;
 }
 
 /* En-tête avec l'image de couverture */
 .resume-content-body .picture-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
-    height: 40vh;
+    height: 30vh;
     background-image: url(../../img/header_cv_blur.jpg);
     background-size: 100%;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 3vh;
+    /* margin-bottom: 3vh; */
+    padding-top: 3vh;
+    padding-bottom: 3vh;
 }
 
 /* Titre dans l'image de couverture */
@@ -210,7 +214,7 @@
     font-size: 3rem;
     color: #ffffff;
     margin: 0;
-    padding: 10vh 2vw 0 2vw;
+    margin-left: 2vw;
     width: 100%;
 }
 
@@ -222,13 +226,35 @@
     font-weight: bold;
     color: #ffffff;
     margin: 0;
-    padding-left: 2vw;
+    margin-left: 2vw;
     width: 100%;
+}
+
+/* Titre dans l'image de couverture */
+.resume-content-body .picture-header .download-cv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Lemon Milk Bold";
+    text-align: left;
+    font-size: 1rem;
+    color: #ffffff;
+    width: 25%;
+    height: 5vh;
+    margin-left: 2vw;
+    background-color: #5a9cff;
+    border-radius: 2vw;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 /* Texte en bleu */
 .resume-content-body .picture-header .blue {
     color: #84b5ff;
+}
+
+.resume-content-body .right-resume-content {
+    padding: 0 4vw 4vw 4vw;
 }
 
 /***********************************************
@@ -240,6 +266,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 3vh;
 }
 
 /* Icône de l'expérience */
@@ -247,6 +274,14 @@
     width: 4vw;
     height: 4vw;
     background-image: url(../../img/work-icon-blue.png);
+    background-size: 4vw;
+}
+
+/* Icône des formations */
+.resume-content-body .title-section .training {
+    width: 4vw;
+    height: 4vw;
+    background-image: url(../../img/training-blue.png);
     background-size: 4vw;
 }
 
@@ -271,20 +306,26 @@
  * SECTION D'UN EMPLOI
  ***********************************************/
 
-/* Conteneur d'une expérience */
+/* Conteneur des cartes */
 .resume-content-body .job-section {
-    background-color: #2d2b33;
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+    width: 100%;
     margin-top: 4vh;
-    padding: 1.5vw 1vw 2vh 1.5vw;
+}
+
+/* Conteneur d'une expérience */
+.resume-content-body .job-card {
+    background-color: #2d2b33;
+    padding: 1.5vw;
     border-radius: 2vw;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* En-tête de l'expérience */
 .resume-content-body .job-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     margin: 0;
 }
 
@@ -293,13 +334,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10vw;
+    width: 20vw;
+    height: 10vh;
     aspect-ratio: 1/1;
     border-radius: 5vw;
     background-color: #5a9cff;
     margin: 0;
     margin-right: 2vw;
     font-weight: bold;
+    margin-bottom: 5vh;
 }
 
 /* Texte de la période */
@@ -307,42 +350,78 @@
     color: white;
     text-align: center;
     font-family: "Ltinternet";
-    font-size: 1.2rem;
-    margin: 0;
-}
-
-/* Titre du poste dans la section expérience */
-.resume-content-body .job-title {
-    /* width: auto; */ /* Option désactivée, peut être utile pour ajustements */
-    font-family: "Ltinternet";
-    font-size: 2rem;
-    color: #e3eeff; /* Texte bleu clair */
+    font-size: 1.9rem;
     font-weight: bold;
+    margin: 0;
 }
 
 /* Variation de couleur pour mettre en avant une partie du titre */
-.resume-content-body .job-title .blue {
-    color: #5a9cff; /* Bleu plus vif */
+.resume-content-body .job{
+    font-family: "Ltinternet";
+    font-size: 2rem;
+    color: #5a9cff;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 5vh;
+    margin-left: 1vw;
 }
+
+/* Titre du poste dans la section expérience */
+.resume-content-body .title-class{
+    font-family: "Ltinternet";
+    font-size: 1.9rem;
+    color: #e3eeff;
+    font-weight: bold;
+    margin: 0;
+    margin-left: 1vw;
+}
+
+.resume-content-body .info-class{
+    font-family: "Ltinternet";
+    font-size: 1.4rem;
+    color: #bed8ff;
+    margin: 0;
+    margin-left: 3vw;
+    text-decoration: none;
+}
+
+.info-class-org .highlight {
+    color: #83b5ff;
+}
+
+.resume-content-body .info-class-org{
+    font-family: "Ltinternet";
+    font-size: 1.4rem;
+    color: #bed8ff;
+    margin: 0;
+    margin-left: 3vw;
+    text-decoration: none;
+}
+
+.info-class-org:hover {
+    color: #83b5ff;
+}
+
+
 
 /* Contenu de l'expérience */
-.resume-content-body .job-content {
-    margin-left: 10vw; /* Décalage à gauche */
+/* .resume-content-body .job-content {
+    margin-left: 10vw;
     margin-top: 0;
-}
+} */
 
 /* Description des tâches dans l'expérience */
-.resume-content-body .description {
+/* .resume-content-body .description {
     font-family: "Ltinternet";
     font-size: 1.1rem;
-    color: #e3eeff; /* Texte bleu clair */
-    list-style-type: none; /* Supprime les puces */
+    color: #e3eeff;
+    list-style-type: none;
     margin: 0;
-}
+} */
 
 /* Personnalisation des puces dans la liste */
-.description li::before {
-    content: ">"; /* Ajoute un chevron comme puce */
+/* .description li::before {
+    content: ">";
     margin-right: 0.5vw;
-}
+} */
 

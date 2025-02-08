@@ -4,6 +4,8 @@
 const resumeDetailIcon = document.getElementById('details-icon');
 const resumeDetailContent = document.getElementById('resume-details-content');
 
+const hightlight_org = document.getElementById('hightlight_org');
+
 let active_details_content = false;
 
 // A revoir
@@ -45,6 +47,9 @@ resumeDetailIcon.addEventListener('mouseout', function () {
         resumeDetailContent.style.maxWidth = '0%';
     }
 });
+
+// setHoverEffects(hightlight_org, '#83b5ff', '#bed8ff');
+
 
 
 // // Content
