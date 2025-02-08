@@ -1,97 +1,110 @@
-body {
-    margin: 0px;
-    overflow-x: hidden;
+/***********************************************
+ * HEADER STYLING
+ ***********************************************/
+
+/* Main header container */
+.header {
+    display: flex;              /* Align elements in a row */
+    align-items: center;        /* Center items vertically */
+    background-color: black;    /* Set header background to black */
+    width: 100vw;               /* Full viewport width */
+    height: 5vh;                /* Small header height */
+    user-select: none;          /* Prevent text selection */
+    flex-shrink: 1;             /* Allow shrinking if needed */
 }
 
-header.header {
-    display: flex;
-    align-items: center;
-    background-color: black;
-    width: 100vw;
-    height: 5vh;
-    user-select: none;
-    flex-shrink: 1;
+/***********************************************
+ * NAVIGATION MENU
+ ***********************************************/
+
+/* Navigation bar inside the header */
+.header nav {
+    display: flex;              /* Flex layout for navigation */
+    flex: 1;                    /* Take full available space */
+    height: 100%;               /* Full height of the header */
+    list-style: none;           /* Remove default list styling */
+    box-sizing: border-box;     /* Include padding and borders in element's size */
 }
 
-/* navigation */
-
-nav {
-    display: flex;
-    flex: 1;
-    height: 100%;
-    list-style: none;
-    box-sizing: border-box;
+/* Navigation items */
+.header nav li {
+    display: flex;              /* Flexbox for centering items */
+    flex: 1;                    /* Each item takes equal space */
+    height: 100%;               /* Full height of the navigation */
+    align-items: center;        /* Center items vertically */
+    justify-content: space-evenly; /* Even spacing between items */
 }
 
-nav li {
-    display: flex;
-    flex: 1;
-    height: 100%;
-    align-items: center;
-    justify-content: space-evenly;
+/* Navigation links */
+.header nav li a {
+    display: flex;              /* Make links flexible for alignment */
+    align-items: center;        /* Center vertically */
+    height: 100%;               /* Full height */
+    justify-content: space-evenly; /* Center text horizontally */
+    text-align: center;         /* Center text */
+    transition: color 0.5s ease; /* Smooth color transition */
+    font-family: "Lemon Milk Medium"; /* Custom font */
+    font-size: clamp(0.5rem, 1vw, 1rem); /* Responsive font size */
+    color: #999999;             /* Default text color */
+    text-decoration: none;      /* Remove underline */
+    cursor: pointer;            /* Change cursor to pointer */
 }
 
-nav li a {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    justify-content: space-evenly;
-    text-align: center;
-    transition: color 0.5s ease;
-    font-family: "Lemon Milk Medium";
-    font-size: clamp(0.5rem, 1vw, 1rem);
-    color: #999999;
-    text-decoration: none;
-    cursor: pointer;
+/***********************************************
+ * LANGUAGE SWITCHER
+ ***********************************************/
+
+/* Wrapper for language selection */
+.header .lang-box {
+    display: flex;              /* Enable flexbox */
+    flex: 1;                    /* Take available space */
+    justify-content: flex-end;  /* Align to the right */
 }
 
-.lang-box {
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-}
-
+/* Language switch button */
 .header .button-lang {
-    position: absolute;
-    display: flex;
-    justify-content: flex;
-    align-items: center;
-    background-color: #303030;
-    margin-right: 3vw;
-    border-radius: 3vw;
-    margin-top: -1.5vh;
-    height: 3vh;
-    width: 5vw;
-    min-width: 10%;
-    cursor: pointer;
+    position: absolute;         /* Absolute positioning */
+    display: flex;              /* Enable flexbox */
+    justify-content: flex-start; /* Align items inside */
+    align-items: center;        /* Center content */
+    background-color: #303030;  /* Dark background */
+    margin-right: 3vw;          /* Right margin for spacing */
+    border-radius: 3vw;         /* Rounded corners */
+    margin-top: -1.5vh;         /* Adjust positioning */
+    height: 3vh;                /* Set height */
+    width: 5vw;                 /* Set width */
+    min-width: 10%;             /* Ensure a minimum width */
+    cursor: pointer;            /* Show pointer cursor */
 }
 
-.button-lang .slider-lang {
-    position: absolute;
-    transition: translate 1s;
-    background-color: #4f4f4f;
-    width: 50%;
-    height: 3vh;
-    border-radius: 3vh;
+/* Sliding language switch indicator */
+.header .button-lang .slider-lang {
+    position: absolute;         /* Position inside the button */
+    transition: translate 1s;   /* Smooth transition for movement */
+    background-color: #4f4f4f;  /* Slightly lighter background */
+    width: 50%;                 /* Half the width of the button */
+    height: 3vh;                /* Same height as the button */
+    border-radius: 3vh;         /* Rounded shape */
 }
 
-.slider-animatation {
-    translate: 100%;
+/* Animation for sliding effect */
+.header .button-lang .slider-animatation {
+    translate: 100%;            /* Moves the slider to the right */
 }
 
-.lang {
-    position: relative;
-    font-family: "Lemon Milk Medium";
-    font-size: clamp(0.5rem, 1vw, 0.7rem);
-    text-decoration: none;
-    color: white;
-    margin: 0vh 0.3vw;
-    display: flex;
-    flex: 1;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    border: none;
-    pointer-events: none;
+/* Language text inside the switcher */
+.header .button-lang .lang {
+    position: relative;         /* Default positioning */
+    font-family: "Lemon Milk Medium"; /* Custom font */
+    font-size: clamp(0.5rem, 1vw, 0.7rem); /* Responsive font size */
+    text-decoration: none;      /* Remove underline */
+    color: white;               /* White text color */
+    margin: 0vh 0.3vw;          /* Small margin */
+    display: flex;              /* Enable flexbox */
+    flex: 1;                    /* Take full available space */
+    text-align: center;         /* Center text */
+    align-items: center;        /* Align vertically */
+    justify-content: center;    /* Center horizontally */
+    border: none;               /* Remove border */
+    pointer-events: none;       /* Disable interactions */
 }

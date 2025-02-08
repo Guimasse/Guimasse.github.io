@@ -1,0 +1,15 @@
+/**************************************** portfolio-content ****************************************/
+
+.portfolio-content {
+    background-color: #252525;
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+}
+
+.portfolio-content p {
+    font-family: "Ltinternet";
+    font-size: 5rem;
+    text-align: center;
+    margin: 3vh 1vw;
+}

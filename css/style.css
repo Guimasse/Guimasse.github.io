@@ -2,7 +2,13 @@
 @import url('header-style.css');
 @import url('landing-page.css');
 
+@import url('pages/home-about.css');
+@import url('pages/resume.css');
 
+body {
+    margin: 0px;
+    overflow-x: hidden;
+}
     
 /********************** Resizing **********************/
 

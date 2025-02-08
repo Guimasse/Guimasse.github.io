@@ -1,18 +1,62 @@
-/**************************************** landing-page ****************************************/
+/***********************************************
+ * LANDING PAGE CONTAINER
+ ***********************************************/
 
+/* Main container that holds all sections */
 .landing-page {
-    display: flex;
+    display: flex;               /* Align sections in a row */
     flex-direction: row;
-    width: 350vw;
-    height: 95vh;
-    flex-grow: 1;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    transition: transform 1.5s ease-in-out;
+    width: 350vw;                /* Total width for multiple sections */
+    height: 95vh;                /* Full viewport height */
+    flex-grow: 1;                /* Allow it to take up remaining space */
+    overflow-y: hidden;          /* Prevent vertical scrolling */
+    scroll-snap-type: x mandatory; /* Enable horizontal snap scrolling */
+    scroll-behavior: smooth;     /* Smooth scrolling effect */
+    transition: transform 1.5s ease-in-out; /* Smooth transition for section changes */
 }
 
-/* scroll bar
+/***********************************************
+ * SCROLLABLE CONTENT
+ ***********************************************/
+
+/* Wrapper for scrollable content inside the landing page */
+.scroll {
+    position: absolute;       /* Ensures it remains on top */
+    overflow-y: auto;         /* Enable vertical scrolling */
+    overflow-x: hidden;       /* Disable horizontal scrolling */
+    width: 100vw;             /* Full viewport width */
+    height: 100%;             /* Full height of parent */
+}
+
+/***********************************************
+ * CUSTOM SCROLLBAR STYLING (for .scroll)
+ ***********************************************/
+
+/* Custom scrollbar width */
+.scroll::-webkit-scrollbar {
+    width: 0.5vw;             /* Thin scrollbar */
+    height: 0.5vw;
+    /* width: 0px;            /* Uncomment for hidden scrollbar */
+    /* background: transparent; */
+}
+
+/* Scrollbar track (background) */
+.scroll::-webkit-scrollbar-track {
+    background-color: #3a3a3a; /* Dark track */
+}
+
+/* Scrollbar thumb (draggable part) */
+.scroll::-webkit-scrollbar-thumb {
+    background-color: #494949; /* Slightly lighter shade */
+    border-radius: 10px;       /* Rounded scrollbar edges */
+}
+
+/***********************************************
+ * UNUSED SCROLLBAR STYLING (for .landing-page)
+ * Uncomment if you want a scrollbar on the landing page itself
+ ***********************************************/
+
+/*
 .landing-page::-webkit-scrollbar {
     width: 0.5vw;
     height: 0.5vw;
@@ -25,540 +69,5 @@
 .landing-page::-webkit-scrollbar-thumb {
     background-color: #494949;
     border-radius: 10px;
-} */
-
-.scroll {
-    position: absolute;
-    overflow-y: auto;
-    overflow-x: hidden;
-    width: 100vw;
-    height: 100%;
 }
-
-/* scroll bar */
-.scroll::-webkit-scrollbar {
-    width: 0.5vw;
-    height: 0.5vw;
-    /* width: 0px;
-    background: transparent; */
-}
-
-.scroll::-webkit-scrollbar-track {
-    background-color: #3a3a3a;
-}
-
-.scroll::-webkit-scrollbar-thumb {
-    background-color: #494949;
-    border-radius: 10px;
-}
-
-/**************************************** home-left ****************************************/
-
-.home-left {
-    width: 50vw;
-    height: 100%;
-    flex-direction: column;
-    user-select: none;
-    box-sizing: border-box;
-    position: relative;
-}
-
-.big-title {
-    margin-left: 5.5vw;
-    margin-bottom: 0vh;
-    font-family: "Lemon Milk Bold";
-    font-size: clamp(1rem, 5vw, 70rem);
-}
-
-.home-left .under-line {
-    content: "";
-    background-color: #ccffff;
-    margin-left: 5.5vw;
-    margin-top: 1vh;
-    /* under-line size */
-    width: 60%;
-    height: 10px;
-}
-
-.under-title {
-    margin-top: 1vh;
-    margin-left: 5.5vw;
-    font-family: "Nexa";
-    font-size: clamp(0.4rem, 2vw, 10rem);
-}
-
-.button {
-    display: flex;
-    justify-content: space-between;
-    margin: 10vh 20%;
-    list-style: none;
-    font-family: "Nexa";
-}
-
-.button a {
-    display: flex;
-    transition: scale 0.5s;
-    border-color: black;
-    border: solid;
-    text-decoration: none;
-    border-radius: 10px / 10px;
-    padding: 5% 2%;
-    width: 10vw;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: clamp(0.4rem, 1vw, 2rem);
-    cursor: pointer;
-}
-
-.button a:visited {
-    color: black;
-}
-
-.button a:hover {
-    scale: 1.1
-}
-
-.linkedin-container {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    height: 8vh;
-}
-
-.logo-container {
-    position: absolute;
-    width: 6vh;
-    height: 5vh;
-    /* margin-left: 1vh; */
-    background-color: white;
-    border-radius: 0 2.5vh 2.5vh 0;
-}
-
-.logo-container .logo {
-    display: block;
-    height: 5vh;
-    margin-left: 1vh;
-    background-image: url(../img/logo_linkedin.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    border-radius: 2.5vh;
-}
-
-.link-linkedin {
-    position: relative;
-    display: flex;
-    align-items: center;
-    content: "www.linkedin.com/in/guillaume-mass%C3%A9-721813209/";
-    color: black;
-    /* width: 5vh; */
-    height: 5vh;
-    margin-left: 1vh;
-    padding-left: 6vh;
-    padding-right: 2vh;
-    background-color: #3a3a3a;
-    overflow: hidden;
-    white-space: nowrap;
-    color: rgb(217, 217, 217);
-    font-family: "Ltinternet";
-    border-radius: 2.5vh;
-    left: -100%;
-    transition: translate 1s;
-}
-
-.linkedin_animate {
-    translate: 102%;
-}
-
-/**************************************** home-about ****************************************/
-
-.home-about {
-    background-color: black;
-    min-height: 100%;
-    width: 50vw;
-    box-sizing: border-box;
-}
-
-.photo_of_me {
-    background-image: url(../img/photo-home-page.jpg);
-    background-size: cover;
-    min-height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/**************************************** home-right ****************************************/
-
-.about-right {
-    width: 50vw;
-    height: 95vh;
-}
-
-.about-right .content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 95vh;
-}
-
-/* .about-right .content h1 {
-    display: flex;
-    background-image: url(../img/desktop-flou.jpg);
-    background-size: cover;
-    color: #ccffff;
-    margin: 0px;
-    padding: 4vh 0vw;
-    font-family: "Lemon Milk Bold";
-    font-size: clamp(1rem, 3vw, 70rem);
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-
-.under-line-about {
-    display: flex;
-    content: "";
-    background-color: #ccffff;
-    width: 100%;
-    height: 10px;
-} */
-
-.about-right .content p {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: "Ltinternet";
-    margin-top: 5vh;
-    padding: 0vh 10%;
-    font-size: clamp(0.5rem, 1.3vw, 2rem);
-}
-
-/**************************************** resume-content ****************************************/
-
-.resume-content {
-    /* display: flex; */
-    background-color: #ffffff;
-    width: 100vw;
-    height: 100%;
-}
-
-    .resume-content .header{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #ffffff;
-        margin: 0;
-    }
-
-    .resume-content .header h1 {
-        font-family: "Lemon Milk Bold";
-        text-align: center;
-        font-size: 3rem;
-        background-color: #242424;
-        color: #ffffff;
-        /* color: #25232a; */
-        margin: 0;
-        width: 100vw;
-    }
-
-    .resume-content .under-line {
-        content: "";
-        background-color: #c7c7c7;
-        /* under-line size */
-        width: 100%;
-        height: 0.5vh;
-        margin: 0;
-    }
-
-    .resume-body {
-        margin: 0;
-        width: 100vw;
-        height: auto;
-        /* background-color: #eeeeee ; */
-    }
-
-        .resume-body .details {
-            position: fixed;
-            display: flex;
-            margin-top: 2vh;
-            width: 27vw;
-            height: 30vh;
-            z-index: 10;
-            /* background-color: red; */
-        }
-
-        .details .content {
-            flex-grow: 1;
-            max-width: 100%;
-            /* max-width: 100%; */
-            height: 100%;
-            background-color: white;
-            border-radius: 0 5vh 5vh 0;
-            overflow-x: hidden;
-            white-space: nowrap;
-            /* background-color: green; */
-        }
-
-        .details .content_sep {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: "Nexa";
-            font-size: 30px;
-            color: white;
-            margin-top: 5vh;
-            width: 100%;
-            height: 5vh;
-            background-color: #55C1FA;
-        }
-
-        .details .icon {
-            margin-top: 5vh;
-            width: 5vh;
-            height: 5vh;
-            justify-content: end;
-            background-image: url(../img/details-icon.png);
-            background-size: 5vh;
-            background-repeat: no-repeat;
-            cursor: pointer;
-        }
-
-        .details .content .content-information {
-            height : 20vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-            .details .content .content-information p {
-                font-family: "Ltinternet";
-                margin: 0;
-                padding-left: 0px;
-                display: flex;
-                justify-content: left;
-                color: black;
-                overflow-x: hidden;
-                font-size: clamp(0.5rem, 1.5vw, 2rem);
-                flex-shrink: 1;
-            }
-
-            .details .content .list {
-                display: flex;
-                flex-direction: row;
-                padding-left: 1vw;
-                align-items: center;
-            }
-
-            .details .list .email-icon {
-                width: 2.5vw;
-                height: 2.5vw;
-                background-image: url(../img/email-icon.png);
-                background-size: 2vw;
-                background-repeat: no-repeat;
-                overflow-x: hidden;
-                flex-shrink: 1;
-            }
-
-            .details .list .telephone-icon {
-                /* margin-top: 0.7vh; */
-                width: 2.5vw;
-                height: 2.5vw;
-                background-image: url(../img/telephone-icon.png);
-                background-size: 2vw;
-                background-repeat: no-repeat;
-                overflow-x: hidden;
-                flex-shrink: 1;
-            }
-
-            .details .list .linkedin-icon {
-                /* margin-top: 0.7vh; */
-                width: 2.5vw;
-                height: 2.5vw;
-                background-image: url(../img/logo_linkedin.png);
-                background-size: 2vw;
-                background-repeat: no-repeat;
-                overflow-x: hidden;
-                flex-shrink: 1;
-            }
-
-            .details .list .end {
-                width: 2vw;
-                height: 2vw;
-                background-color: white;
-                flex-shrink: 0;
-            }
-
-        .resume-content-body {
-            display: flex;
-            flex-direction: row;
-        }
-
-            .resume-content-body .left-resume {
-                width: 30%;
-                /* background-color: #3786ff; */
-                background-color: #1e1d21;
-            }
-
-            .resume-content-body .right-resume {
-                width: 70%;
-                padding-top: 2vw;
-                padding-left: 4vw;
-                padding-right: 4vw;
-                padding-bottom: 4vw;
-                background-color: #25232a;
-            }
-
-                .resume-content-body .picture-header {
-                    width: 100%;
-                    height: 40vh;
-                    background-image: url(../img/header_cv_blur.jpg);
-                    background-size: 100%;
-                    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-                    margin-bottom: 3vh;
-                }
-
-                    .resume-content-body .picture-header .title{
-                        font-family: "Lemon Milk Bold";
-                        text-align: left;
-                        font-size: 3rem;
-                        color: #ffffff;
-                        margin: 0;
-                        padding-top: 10vh;
-                        padding-left: 2vw;
-                        width: 100%;
-                    }
-
-                    .resume-content-body .picture-header .sub_title{
-                        font-family: "Courier New";
-                        text-align: left;
-                        font-size: 1.2rem;
-                        font-weight: bold;
-                        color: #ffffff;
-                        margin: 0;
-                        padding-left: 2vw;
-                        width: 100%;
-                    }
-
-                    .resume-content-body .picture-header .blue {
-                        color: #84b5ff;
-                    }
-
-                .resume-content-body .title-section {
-                    display: flex;
-                    flex: row;
-                    align-items: center;
-                }
-
-                    .resume-content-body .title-section .work-experiences {
-                        width: 4vw;
-                        height: 4vw;
-                        background-image: url(../img/work-icon.png);
-                        background-size: 4vw;
-                    }
-
-                    .resume-content-body .title-section h1{
-                        margin: 0px;
-                        margin-left: 2vw;
-                        width: auto;
-                        font-family: "Lemon Milk Bold";
-                        font-size: 2.5rem;
-                        color: #e3eeff;
-                    }
-
-                    .resume-content-body .separation{
-                        width: 100%;
-                        height: 0.5vh;
-                        margin-top: 1vh;
-                        /* background-color: #3786ff; */
-                        background-color: #e3eeff;
-                    }
-
-                .resume-content-body .job-section {
-                    background-color: #2d2b33;
-                    margin-top: 4vh;
-                    padding-left: 1.5vw;
-                    padding-right: 1vw;
-                    padding-bottom: 2vh;
-                    border-radius: 2vw 2vw 2vw 2vw;
-                    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-                }
-
-                    .resume-content-body .job-header{
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        margin: 0;
-                    }
-
-                        .resume-content-body .period{
-                            display:flex;
-                            justify-content: center;
-                            align-items: center;
-                            width: 10vw;
-                            aspect-ratio: 1 / 1;
-                            position: relative;
-                            border-radius: 5vw 5vw 5vw 5vw;
-                            background-color: #5a9cff;
-                            margin: 0;
-                            margin-right: 2vw;
-                            font-weight: bold;
-                        }
-
-                        .resume-content-body .period p{
-                            color: white;
-                            text-align: center;
-                            font-family: "Ltinternet";
-                            font-size: 1.2rem;
-                            margin: 0px;
-                            padding: 0px;
-                        }
-
-                        .resume-content-body .job-title{
-                            /* width: auto; */
-                            font-family: "Ltinternet";
-                            font-size: 2rem;
-                            color: #e3eeff;
-                            font-weight: bold;
-                        }
-
-                        .resume-content-body .job-title .blue {
-                            color: #5a9cff;
-                        }
-
-                    .resume-content-body .job-content {
-                        margin-left: 10vw;
-                        margin-top: 0;
-                    }
-
-                        .resume-content-body .description{
-                            font-family: "Ltinternet";
-                            font-size: 1.1rem;
-                            color: #e3eeff;
-                            list-style-type: none;
-                            margin: 0;
-                        }
-
-                        .description li::before {
-                            content: ">"; /* Ajoute une étoile comme puce */
-                            margin-right: 0.5vw;
-                        }
-
-/**************************************** portfolio-content ****************************************/
-
-.portfolio-content {
-    background-color: #252525;
-    width: 100vw;
-    height: auto;
-    overflow: hidden;
-}
-
-.portfolio-content p {
-    font-family: "Ltinternet";
-    font-size: 5rem;
-    text-align: center;
-    margin: 3vh 1vw;
-}
+*/

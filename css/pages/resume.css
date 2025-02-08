@@ -1,0 +1,348 @@
+/***********************************************
+ * RESUME CONTENT (Page CV)
+ ***********************************************/
+
+/* Conteneur principal du CV */
+.resume-content {
+    background-color: #ffffff;  /* Fond blanc */
+    width: 100vw;               /* Pleine largeur de l'écran */
+    height: 100%;               /* Hauteur adaptable */
+}
+
+/***********************************************
+ * HEADER DU CV
+ ***********************************************/
+
+/* Section du header */
+.resume-content .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+/* Titre principal du CV */
+.resume-content .header h1 {
+    font-family: "Lemon Milk Bold"; /* Police personnalisée */
+    text-align: center;             /* Centrage du texte */
+    font-size: 3rem;                /* Taille du texte */
+    background-color: #242424;       /* Fond foncé */
+    color: #ffffff;                  /* Texte blanc */
+    margin: 0;
+    width: 100vw;                    /* Largeur pleine */
+}
+
+/* Barre de séparation sous le titre */
+.resume-content .under-line {
+    content: "";
+    background-color: #c7c7c7; /* Couleur gris clair */
+    width: 100%;
+    height: 0.5vh; /* Hauteur de la barre */
+    margin: 0;
+}
+
+/***********************************************
+ * CONTENU DU CV
+ ***********************************************/
+
+/* Section principale du corps du CV */
+.resume-body {
+    margin: 0;
+    width: 100vw;
+    height: auto;
+}
+
+/* Détails personnels */
+.resume-body .details {
+    position: fixed;
+    display: flex;
+    margin-top: 2vh;
+    width: 27vw;
+    height: 30vh;
+    z-index: 10; /* Superposition sur les autres éléments */
+}
+
+/* Contenu des détails */
+.details .content {
+    flex-grow: 1;
+    max-width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 0 5vh 5vh 0;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+/* Séparateur de la section des détails */
+.details .content_sep {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Nexa";
+    font-size: 30px;
+    color: white;
+    margin-top: 5vh;
+    width: 100%;
+    height: 5vh;
+    background-color: #55C1FA; /* Bleu clair */
+}
+
+/* Icône pour afficher/masquer les détails */
+.details .icon {
+    margin-top: 5vh;
+    width: 5vh;
+    height: 5vh;
+    justify-content: end;
+    background-image: url(../../img/details-icon.png);
+    background-size: 5vh;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/* Informations dans les détails */
+.details .content .content-information {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Texte des informations */
+.details .content .content-information p {
+    font-family: "Ltinternet";
+    margin: 0;
+    padding-left: 0px;
+    display: flex;
+    justify-content: left;
+    color: black;
+    overflow-x: hidden;
+    font-size: clamp(0.5rem, 1.5vw, 2rem);
+    flex-shrink: 1;
+}
+
+/* Liste des informations personnelles */
+.details .content .list {
+    display: flex;
+    flex-direction: row;
+    padding-left: 1vw;
+    align-items: center;
+}
+
+/* Icône email */
+.details .list .email-icon {
+    width: 2.5vw;
+    height: 2.5vw;
+    background-image: url(../../img/email-icon.png);
+    background-size: 2vw;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    flex-shrink: 1;
+}
+
+/* Icône téléphone */
+.details .list .telephone-icon {
+    width: 2.5vw;
+    height: 2.5vw;
+    background-image: url(../../img/telephone-icon.png);
+    background-size: 2vw;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    flex-shrink: 1;
+}
+
+/* Icône LinkedIn */
+.details .list .linkedin-icon {
+    width: 2.5vw;
+    height: 2.5vw;
+    background-image: url(../../img/logo_linkedin.png);
+    background-size: 2vw;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    flex-shrink: 1;
+}
+
+/* Espacement entre les éléments */
+.details .list .end {
+    width: 2vw;
+    height: 2vw;
+    background-color: white;
+    flex-shrink: 0;
+}
+
+/***********************************************
+ * STRUCTURE DU CONTENU DU CV
+ ***********************************************/
+
+/* Conteneur global du contenu du CV */
+.resume-content-body {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Colonne gauche (informations personnelles) */
+.resume-content-body .left-resume {
+    width: 30%;
+    background-color: #1e1d21;
+}
+
+/* Colonne droite (expérience et autres sections) */
+.resume-content-body .right-resume {
+    width: 70%;
+    padding: 2vw 4vw 4vw 4vw;
+    background-color: #25232a;
+}
+
+/* En-tête avec l'image de couverture */
+.resume-content-body .picture-header {
+    width: 100%;
+    height: 40vh;
+    background-image: url(../../img/header_cv_blur.jpg);
+    background-size: 100%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3vh;
+}
+
+/* Titre dans l'image de couverture */
+.resume-content-body .picture-header .title {
+    font-family: "Lemon Milk Bold";
+    text-align: left;
+    font-size: 3rem;
+    color: #ffffff;
+    margin: 0;
+    padding: 10vh 2vw 0 2vw;
+    width: 100%;
+}
+
+/* Sous-titre */
+.resume-content-body .picture-header .sub_title {
+    font-family: "Courier New";
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    padding-left: 2vw;
+    width: 100%;
+}
+
+/* Texte en bleu */
+.resume-content-body .picture-header .blue {
+    color: #84b5ff;
+}
+
+/***********************************************
+ * SECTION DES EXPÉRIENCES PROFESSIONNELLES
+ ***********************************************/
+
+/* En-tête de section */
+.resume-content-body .title-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Icône de l'expérience */
+.resume-content-body .title-section .work-experiences {
+    width: 4vw;
+    height: 4vw;
+    background-image: url(../../img/work-icon-blue.png);
+    background-size: 4vw;
+}
+
+/* Titre de la section */
+.resume-content-body .title-section h1 {
+    margin: 0;
+    margin-left: 2vw;
+    font-family: "Lemon Milk Bold";
+    font-size: 2.5rem;
+    color: #e3eeff;
+}
+
+/* Ligne de séparation */
+.resume-content-body .separation {
+    width: 100%;
+    height: 0.5vh;
+    margin-top: 1vh;
+    background-color: #e3eeff;
+}
+
+/***********************************************
+ * SECTION D'UN EMPLOI
+ ***********************************************/
+
+/* Conteneur d'une expérience */
+.resume-content-body .job-section {
+    background-color: #2d2b33;
+    margin-top: 4vh;
+    padding: 1.5vw 1vw 2vh 1.5vw;
+    border-radius: 2vw;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* En-tête de l'expérience */
+.resume-content-body .job-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+}
+
+/* Période d'emploi */
+.resume-content-body .period {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    aspect-ratio: 1/1;
+    border-radius: 5vw;
+    background-color: #5a9cff;
+    margin: 0;
+    margin-right: 2vw;
+    font-weight: bold;
+}
+
+/* Texte de la période */
+.resume-content-body .period p {
+    color: white;
+    text-align: center;
+    font-family: "Ltinternet";
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Titre du poste dans la section expérience */
+.resume-content-body .job-title {
+    /* width: auto; */ /* Option désactivée, peut être utile pour ajustements */
+    font-family: "Ltinternet";
+    font-size: 2rem;
+    color: #e3eeff; /* Texte bleu clair */
+    font-weight: bold;
+}
+
+/* Variation de couleur pour mettre en avant une partie du titre */
+.resume-content-body .job-title .blue {
+    color: #5a9cff; /* Bleu plus vif */
+}
+
+/* Contenu de l'expérience */
+.resume-content-body .job-content {
+    margin-left: 10vw; /* Décalage à gauche */
+    margin-top: 0;
+}
+
+/* Description des tâches dans l'expérience */
+.resume-content-body .description {
+    font-family: "Ltinternet";
+    font-size: 1.1rem;
+    color: #e3eeff; /* Texte bleu clair */
+    list-style-type: none; /* Supprime les puces */
+    margin: 0;
+}
+
+/* Personnalisation des puces dans la liste */
+.description li::before {
+    content: ">"; /* Ajoute un chevron comme puce */
+    margin-right: 0.5vw;
+}
+

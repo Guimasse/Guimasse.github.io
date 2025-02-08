@@ -1,0 +1,183 @@
+/**************************************** home-left ****************************************/
+
+.home-left {
+    width: 50vw;
+    height: 100%;
+    flex-direction: column;
+    user-select: none;
+    box-sizing: border-box;
+    position: relative;
+}
+
+    .home-left .title {
+        margin-left: 5.5vw;
+        margin-bottom: 0vh;
+        font-family: "Lemon Milk Bold";
+        font-size: clamp(1rem, 5vw, 70rem);
+    }
+
+    .home-left .under-line {
+        content: "";
+        background-color: #ccffff;
+        margin-left: 5.5vw;
+        margin-top: 1vh;
+        /* under-line size */
+        width: 60%;
+        height: 10px;
+    }
+
+    .home-left .under-title {
+        margin-top: 1vh;
+        margin-left: 5.5vw;
+        font-family: "Nexa";
+        font-size: clamp(0.4rem, 2vw, 10rem);
+    }
+
+    .home-left .button-homeleft {
+        display: flex;
+        justify-content: space-between;
+        margin: 10vh 20%;
+        list-style: none;
+        font-family: "Nexa";
+    }
+
+        .home-left .button-homeleft a {
+            display: flex;
+            transition: scale 0.5s;
+            border-color: black;
+            border: solid;
+            text-decoration: none;
+            border-radius: 10px / 10px;
+            padding: 5% 2%;
+            width: 10vw;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(0.4rem, 1vw, 2rem);
+            cursor: pointer;
+        }
+
+        .home-left .button-homeleft a:visited {
+            color: black;
+        }
+
+        .home-left .button-homeleft a:hover {
+            scale: 1.1
+        }
+
+    .home-left .linkedin-container {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        height: 8vh;
+    }
+
+        .home-left .linkedin-container .link-linkedin {
+            position: relative;
+            display: flex;
+            align-items: center;
+            content: "www.linkedin.com/in/guillaume-mass%C3%A9-721813209/";
+            color: black;
+            height: 5vh;
+            margin-left: 1vh;
+            padding-left: 6vh;
+            padding-right: 2vh;
+            background-color: #3a3a3a;
+            overflow: hidden;
+            white-space: nowrap;
+            color: rgb(217, 217, 217);
+            font-family: "Ltinternet";
+            border-radius: 2.5vh;
+            left: -100%;
+            transition: translate 1s;
+        }
+        
+        .home-left .linkedin-container .linkedin_animate {
+            translate: 102%;
+        }
+
+        .home-left .linkedin-container .logo-container {
+            position: absolute;
+            width: 6vh;
+            height: 5vh;
+            /* margin-left: 1vh; */
+            background-color: white;
+            border-radius: 0 2.5vh 2.5vh 0;
+        }
+
+            .home-left .linkedin-container .logo-linkedin {
+                display: block;
+                height: 5vh;
+                margin-left: 1vh;
+                background-image: url(../img/logo_linkedin.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                border-radius: 2.5vh;
+            }
+
+/**************************************** home-about ****************************************/
+
+.home-about {
+    background-color: black;
+    min-height: 100%;
+    width: 50vw;
+    box-sizing: border-box;
+}
+
+    .home-about .photo_of_me {
+        background-image: url(../../img/photo-home-page.jpg);
+        background-size: cover;
+        min-height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+/**************************************** home-right ****************************************/
+
+.about-right {
+    width: 50vw;
+    height: 95vh;
+}
+
+    .about-right .content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 95vh;
+    }
+
+    /* .about-right .content h1 {
+        display: flex;
+        background-image: url(../img/desktop-flou.jpg);
+        background-size: cover;
+        color: #ccffff;
+        margin: 0px;
+        padding: 4vh 0vw;
+        font-family: "Lemon Milk Bold";
+        font-size: clamp(1rem, 3vw, 70rem);
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-right .content .under-line-about {
+        display: flex;
+        content: "";
+        background-color: #ccffff;
+        width: 100%;
+        height: 10px;
+    } */
+
+    .about-right .content p {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: "Ltinternet";
+        margin-top: 5vh;
+        padding: 0vh 10%;
+        font-size: clamp(0.5rem, 1.3vw, 2rem);
+    }
