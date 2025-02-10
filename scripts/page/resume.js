@@ -48,7 +48,11 @@ resumeDetailIcon.addEventListener('mouseout', function () {
     }
 });
 
-// setHoverEffects(hightlight_org, '#83b5ff', '#bed8ff');
+// // Calcul de la valeur
+let leftValue = (0.5 + 0.1*(1/3))*100
+
+// Appliquer la valeur calculée à l'élément
+document.querySelector('.job-card-detail').style.left = leftValue + '%';
 
 
 
