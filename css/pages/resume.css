@@ -490,12 +490,10 @@
     color: #83b5ff;
 }
 
-/* .resume-body .job-card-detail {
+.resume-body .job-card-detail {
     position: fixed;
     top: 2%;
-    /* top: 2vh;
-    left: 40vw; */
-    display: block;
+    display: none;
     margin-top: 2vh;
     width: 50vw;
     height: 85vh;
@@ -505,13 +503,28 @@
     overflow-y: hidden;
 }
 
-.resume-body .example {
-    width: 30vh;
-    height: 120vh;
-    z-index: 100;
-    background-color: green;
-    border-radius: 5em;
-} */
+.resume-body .job-card-detail .card-content-detail{
+    margin: 3%;
+    margin-right: 53%;
+}
+
+.resume-body .job-card-detail p{
+    font-family: "Ltinternet";
+    font-size: 1.4rem;
+    color: #e3eeff;
+    margin: 0;
+    margin-left: 3vw;
+    text-decoration: none;
+}
+
+.resume-body .job-card-detail li{
+    font-family: "Ltinternet";
+    font-size: 1.4rem;
+    color: #e3eeff;
+    margin: 0;
+    padding-left: 3vw;
+    text-decoration: none;
+}
 
 
 
@@ -529,6 +542,3 @@
     list-style-type: none;
     margin: 0;
 } */
-
-
-
