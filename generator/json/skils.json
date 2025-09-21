@@ -1,0 +1,52 @@
+{
+  "Compétences": {
+    "Humaines": [
+      "Collaboration",
+      "Indépendant",
+      "Méticuleux",
+      "Flexible"
+    ],
+    "Techniques": {
+      "Electronique": {
+        "icon_class": "electronic-icon",
+        "skills": [
+          "Conception de circuits électroniques",
+          "Description Matériel (VHDL)",
+          "Conception Matériel Haut niveau (HLS)",
+          "Architecture processeur (RISC-V)",
+          "Système d'exploitation (Linux)",
+          "Électronique analogique (HF/Filtrage/Oscillateur)"
+        ]
+      },
+      "Programmation": {
+        "icon_class": "programmation-icon",
+        "skills": [
+          "C (+Multithreading)",
+          "C++",
+          "Python"
+        ]
+      },
+      "Logiciels": {
+        "icon_class": "logiciels-icon",
+        "skills": [
+          "MatLab",
+          "Quartus/Vivado",
+          "Vitis",
+          "Kicad",
+          "Spice simulation",
+          "Git"
+        ]
+      }
+    }
+  },
+  "Loisirs": [
+    "Basketball pendant 5 ans (joueur)",
+    "Basketball pendant 2 ans (entraîneur)",
+    "Électronique & Programmation au sein de projets personnels",
+    "Nouvelles technologies (IA)"
+  ],
+  "Langues": [
+    "Français (native)",
+    "Anglais: C1 (CEFR)"
+  ]
+}

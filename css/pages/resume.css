@@ -418,33 +418,110 @@
 }
 
 /* Période d'emploi */
-.right-resume .period {
+.right-resume .job {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20vw;
-    height: 10vh;
+    width: 95%;
+    height: 10vh;;
     aspect-ratio: 1/1;
     border-radius: 5vw;
     background-color: #5a9cff;
     margin: 0;
-    margin-right: 2vw;
+    padding: 0;
     font-weight: bold;
     margin-bottom: 5vh;
 }
 
 /* Texte de la période */
-.right-resume .period p {
+.right-resume .job a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+    text-align: center;
     color: white;
     text-align: center;
     font-family: "Ltinternet";
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin: 0;
+}
+
+/* Texte de la période */
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0; right: 0;
+    bottom: 0; left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(44, 44, 44, 0.7);
+    transition: all .4s;
+    height: 100vh;
+    z-index: 100; /* Superposition sur les autres éléments */
+}
+
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal_content {
+    /* height: 70%; */
+    border-radius: 2em;
+    position: relative;
+    width: 50vw;
+    background: rgb(22, 22, 22);
+}
+
+.modal_content h1 {
+    flex: 1;
+    background-color : #5a9cff;
+    margin-left: 2%;
+    padding: 1%;
+    padding-left: 5%; padding-right: 5%;
+    width: 86%;
+    border-radius: 5em;
+    font-size: 1.8rem;
+    color: white;
+    font-family: "Ltinternet";
+    /* text-align: center; */
+}
+
+.modal_content p {
+    /* background-color: red; */
+    flex: 1;
+    margin-left: 2%;
+    padding-left: 5%;
+    width: 81%;
+    border-radius: 5em;
+    font-size: 1.2rem;
+    color: white;
+    font-family: "Ltinternet";
+}
+
+.modal_content li {
+    /* background-color: red; */
+    flex: 1;
+    margin-left: 15%;
+    width: 73%;
+    border-radius: 5em;
+    font-size: 1.2rem;
+    color: white;
+    font-family: "Ltinternet";
+}
+
+.modal_close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: grey;
+  text-decoration: none;
 }
 
 /* Variation de couleur pour mettre en avant une partie du titre */
-.right-resume .job{
+.right-resume .period{
     font-family: "Ltinternet";
     font-size: 2rem;
     color: #5a9cff;
@@ -489,56 +566,3 @@
 .right-resume .info-class-org:hover {
     color: #83b5ff;
 }
-
-.resume-body .job-card-detail {
-    position: fixed;
-    top: 2%;
-    display: none;
-    margin-top: 2vh;
-    width: 50vw;
-    height: 85vh;
-    z-index: 100;
-    background-color: rgba(17, 17, 17, 0.98);
-    border-radius: 5em;
-    overflow-y: hidden;
-}
-
-.resume-body .job-card-detail .card-content-detail{
-    margin: 3%;
-    margin-right: 53%;
-}
-
-.resume-body .job-card-detail p{
-    font-family: "Ltinternet";
-    font-size: 1.4rem;
-    color: #e3eeff;
-    margin: 0;
-    margin-left: 3vw;
-    text-decoration: none;
-}
-
-.resume-body .job-card-detail li{
-    font-family: "Ltinternet";
-    font-size: 1.4rem;
-    color: #e3eeff;
-    margin: 0;
-    padding-left: 3vw;
-    text-decoration: none;
-}
-
-
-
-/* Contenu de l'expérience */
-/* .resume-content-body .job-content {
-    margin-left: 10vw;
-    margin-top: 0;
-} */
-
-/* Description des tâches dans l'expérience */
-/* .resume-content-body .description {
-    font-family: "Ltinternet";
-    font-size: 1.1rem;
-    color: #e3eeff;
-    list-style-type: none;
-    margin: 0;
-} */

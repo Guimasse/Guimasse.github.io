@@ -1,0 +1,47 @@
+[
+  {
+    "index": "1",
+    "periode": "Depuis Sept. 2025",
+    "job": "Ingénieur en Développement FPGA et Traitement du signal",
+    "entreprise": "Thales SIX GTS France Cholet",
+    "lien": "https://www.thalesgroup.com/fr",
+    "adresse": "110 Av. du Maréchal Leclerc, 49300 Cholet, France",
+    "desc": [
+      "Developing complex systems in VHDL language (hardware description language) to implement it on FPGA. I have improved my skills in:",
+      "<li>Architecture design</li>",
+      "<li>RTL simulation (VHDL/Cocotb)</li>",
+      "</p><p>Projects:",
+      "<li>Research on reconfiguration design flow to create partitions that can be reconfigurable without editing the static part of the design (DPR). More information: <a href=\"https://docs.xilinx.com/r/en-US/ug909-vivado-partial-reconfiguration/Introduction\" target=\"_blank\" style=\"color: inherit;\"> UG909 Vivado</a></li>",
+      "<li>Function development and simulation to deal with samples</li>",
+      "<li>Testbench development in co-simulation to open hardware on Ethernet module</li>",
+      "<li>Design of a 32-bit RISC processor in VHDL</li>"
+    ]
+   },
+  {
+    "index": "2",
+    "periode": "Sept. 2025 - Sept. 2022",
+    "job": "Apprenti Ingénieur Developpeur VHDL",
+    "entreprise": "Thales SIX GTS France Cholet",
+    "lien": "https://www.thalesgroup.com/fr",
+    "adresse": "110 Av. du Maréchal Leclerc, 49300 Cholet, France",
+    "desc":""
+  },
+  {
+    "index": "3",
+    "periode": "Sept. - Dec. 2024",
+    "job": "Stagiaire Rercherche RF",
+    "entreprise": "Université Technologique d'Augsbourg",
+    "lien": "https://www.tha.de/",
+    "adresse": "An d. Hochschule 1, 86161 Augsburg, Allemagne",
+    "desc":""
+  },
+  {
+    "index": "4",
+    "periode": "Avrl. - Juin 2022",
+    "job": "Stagiaire Technicien Supéieur",
+    "entreprise": "Novo Nordisk",
+    "lien": "https://www.novonordisk.fr/",
+    "adresse": "45 Avenue d'Orléans, 28000 Chartres, France",
+    "desc":""
+  }
+]
